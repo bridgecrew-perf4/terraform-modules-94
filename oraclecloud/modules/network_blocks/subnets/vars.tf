@@ -2,10 +2,11 @@ variable subnet_cidr_block {}
 variable parent_compartment_id {}
 variable vcn_id {}
 variable subnet_route_tables {
-  type = list(string)
+  default = ""
 }
 
 variable subnet_security_list_ids {
+  default = []
   type = list(string)
 }
 
@@ -26,12 +27,11 @@ variable subnet_prohibit_public_ip_on_vnic {
 }
 
 variable defined_tags {
-  default = []
+  default = {}
 }
 
 variable freeform_tags {
-  default = []
-  value = ""
+  default = {}
 }
 
 variable subnet_dns_label {
