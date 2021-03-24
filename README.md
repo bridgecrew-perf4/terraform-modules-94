@@ -9,7 +9,8 @@ echo 'tenancy_ocid = ""
 user_ocid = ""
 fingerprint = "" 
 private_key_path = ""
-region = ""' > terraform.tfvars
+region = ""
+root_compartment = ""' > terraform.tfvars
 ```
 
 ### Directory Structure
