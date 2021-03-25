@@ -15,4 +15,13 @@ resource "oci_core_subnet" subnet {
 
     defined_tags = var.defined_tags
     freeform_tags = var.freeform_tags
+
+
+    lifecycle {
+        ignore_changes = [
+        # Ignore changes to tags, e.g. because a management agent
+        # updates these based on some ruleset managed elsewhere.
+        defined_tags, freeform_tags
+        ]
+    }
 }

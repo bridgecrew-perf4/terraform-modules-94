@@ -1,6 +1,11 @@
 variable parent_compartment_id {}
 variable vcn_cidr_blocks {
   type = list(string)
+  default = []
+}
+
+variable vcn_cidr_block {
+  default = ""
 }
 
 variable vcn_display_name {
