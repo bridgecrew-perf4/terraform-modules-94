@@ -1,4 +1,4 @@
-# terraform.oci
+# terraform.cloud
 Multi-Cloud with modular terraform. Below are the documentations for building infrastructures: 
 * with [Oracle Cloud Infrastructure](https://registry.terraform.io/providers/hashicorp/oci/latest/docs). 
 * with [Azure Cloud](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
