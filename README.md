@@ -1,36 +1,9 @@
-# terraform.cloud
-Multi-Cloud with modular terraform. Below are the documentations for building infrastructures: 
-* with [Oracle Cloud Infrastructure](https://registry.terraform.io/providers/hashicorp/oci/latest/docs). 
-* with [Azure Cloud](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
+# Cloud IaC with Terraform
+Multi-cloud and modular terraform scripts used primarily for testing and demonstration purposes.
 
 ### Getting Started
-1. Clone the repository, then depending on which cloud, run the following:
-```bash
-#########
-# Oracle
-#########
-cd oraclecloud &&
-echo 'tenancy_ocid = ""
-user_ocid = ""
-fingerprint = "" 
-private_key_path = ""
-region = ""
-root_compartment = ""' > terraform.tfvars
+```angular2html
 
-#########
-# Azure
-#########
-```
-2. fill out the following variables in the `terraform.tfvars`
-
-### Directory Structure
-```
-oraclecloud
-| modules - my terraform modules (subnets, VCNs)
-| recipes - different modules.tf files building different things
-azurecloud
-| modules
-| recipes
 ```
 
 ### Continued Learning
@@ -38,3 +11,5 @@ For any continued learning and diving deeper into Infrastructure as Code (IaC),
 you have the following links from Terraform:
 
 * [Understand the Terraform Configuration Language [Documentation]](https://www.terraform.io/docs/configuration/index.html)
+* [Terraform with Oracle Cloud [Reference]](https://registry.terraform.io/providers/hashicorp/oci/latest/docs)
+* [Terraform with Azure Cloud [Reference]](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)

@@ -1,11 +1,11 @@
 module "simple_compartment" {
-  source = "../modules/identity/compartment"
+  source = "https://github.com/naberin/terraform.cloud/oraclecloud/modules/identity/compartment"
   compartment_name = "simple_compartment"
   parent_compartment_id = ""
 }
 
 module "simple_vcn" {
-  source = "../modules/core/vcns"
+  source = "https://github.com/naberin/terraform.cloud/oraclecloud/modules/modules/core/vcns"
   parent_compartment_id = module.simple_compartment.id
   vcn_cidr_block = "10.0.0.0/16"
   vcn_dns_label = "simplevcn"
@@ -13,7 +13,7 @@ module "simple_vcn" {
 }
 
 module "security_list" {
-  source = "../modules/core/security_list"
+  source = "https://github.com/naberin/terraform.cloud/oraclecloud/modules/modules/core/security_list"
 
   compartment_id = module.simple_compartment.id
   vcn_id = module.simple_vcn.id
@@ -24,7 +24,7 @@ module "security_list" {
 
 module "simple_subnet" {
   depends_on = [module.security_list]
-  source = "../modules/core/subnets"
+  source = "https://github.com/naberin/terraform.cloud/oraclecloud/modules/modules/core/subnets"
   parent_compartment_id = module.simple_compartment.id
   subnet_cidr_block = "10.0.1.0/24"
   vcn_id = module.simple_vcn.id
